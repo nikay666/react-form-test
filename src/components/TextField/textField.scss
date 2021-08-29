@@ -1,0 +1,46 @@
+.text-field{
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+  transition: 0.1s ease-in-out;
+
+  &__label{
+    margin-bottom: 8px;
+  }
+
+  &__error-message{
+    display: block;
+    color: var(--error);
+    font-weight: bold;
+    font-size: 0.8rem;
+    height: 0.8rem;
+    transition: 0.1s ease-in-out;
+    margin: 7px 0 0 0;
+  }
+}
+
+.input{
+  font: inherit;
+  font-size: 1rem;
+  border-radius: var(--border-radius);
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+  display: block;
+  padding: 5px 12px;
+  min-width: 0;
+  background: none;
+  transition: 0.15s ease-in-out;
+  outline-color: var(--primary);
+
+  &:hover{
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+  }
+
+  &--error{
+    outline-color: var(--error);
+    border: 2px solid  var(--error);
+  }
+}
+.label{
+  display: inline-block;
+}

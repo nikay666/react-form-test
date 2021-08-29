@@ -1,29 +1,56 @@
 import React from 'react';
+import { emailRegExp } from '../../constants';
+import { checkValidEmail, checkValidLogin, checkValidPassword } from '../../utilities/formValidation';
 import { Button } from '../Button';
+import { TextField } from '../TextField';
 import './form.scss';
 
+type FormProps = {
+  login?: boolean,
+  password?: boolean,
+  email?: boolean
+};
 
-export const Form: React.FC = () => {
+const Form = ({login, password, email}: FormProps) => {
+
   return (
     <form className='form' name=''>
-      <div className='form__group'>
-        <label className='label' htmlFor="login">Login*</label>
-        <input className='input' name='login' required type="text" placeholder='Login' />
-      </div>
+      { login &&  <TextField
+          label='Login*'
+          type='text'
+          placeholder='Login'
+          id='login'
+          name='login'
+          className='form__group'
+          validation={checkValidLogin}
+          validationCondition={4}
+      />}
+
+      { email && <TextField
+        label='Email*'
+        type='email'
+        placeholder='E-mail'
+        id='email'
+        name='email'
+        className='form__group'
+        validation={checkValidEmail}
+        validationCondition={emailRegExp}
+      />}
       
-
-      <div className='form__group'>
-        <label className='label ' htmlFor="password">Password*</label>
-        <input className='input' required name='password' type="password" placeholder='Password' />
-      </div>   
-
-          
-          
-    <div className='form__group'> 
-      <label className='label' htmlFor="email">Email*</label>
-      <input className='input' type="email" name="email" id="" placeholder='E-mail' />
-    </div>
+      { password && <TextField
+        label='Password*'
+        type='password'
+        placeholder='Password'
+        id='password'
+        name='password'
+        className='form__group'
+        validation={checkValidPassword}
+        validationCondition={6}
+      />}
+      
       <Button className='form__button' type='submit'>Войти</Button>
     </form>
-  )
+  );
 };
+
+export default Form;

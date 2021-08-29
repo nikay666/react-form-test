@@ -1,1 +1,1 @@
-export {LoginCallout} from './LoginCallout'
+export { default as LoginCallout } from './LoginCallout';

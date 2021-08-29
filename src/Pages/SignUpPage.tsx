@@ -6,14 +6,12 @@ export const SignUpPage: React.FC = () => {
   return (
     <div className='page'>
       <h1>Sing up</h1>
-      <Form/>
-
+      <Form login={true} email={true} password={true} />
       <LoginCallout
         title='Already have an account?'
         to='/login'
         linkText='Sign in'
       />
-
     </div>
-  )
+  );
 };

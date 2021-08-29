@@ -8,11 +8,13 @@ type LoginCalloutProps = {
   linkText: string
 };
 
-export const LoginCallout: React.FC<LoginCalloutProps> = ({title, to, linkText}) => {
+const LoginCallout = ({title, to, linkText}: LoginCalloutProps) => {
   return (
     <div className='login-callout' >
       <p className='login-callout__title subtitle'>{title}</p>
       <Link className='link' to={to}>{linkText}</Link>
     </div>
-  )
+  );
 };
+
+export default LoginCallout;

@@ -14,39 +14,11 @@
 
   &__group{
     width: 100%;
-    text-align: left;
-    margin-bottom: 8px;
-
-    .label{
-      margin-bottom: 8px;
-    }
+ 
   }
   
   .input, .btn, .link{
     width: 100%;
   }
-
 }
 
-.input{
-  font: inherit;
-  font-size: 1rem;
-  border-radius: var(--border-radius);
-  border: 2px solid transparent;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
-  margin: 0;
-  display: block;
-  padding: 5px 12px;
-  min-width: 0;
-  background: none;
-  transition: 0.15s ease-in-out;
-  outline-color: var(--primary);
-  margin-bottom: 15px;
-  &:hover{
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
-  }
-
-}
-.label{
-  display: inline-block;
-}
