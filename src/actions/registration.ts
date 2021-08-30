@@ -22,7 +22,6 @@ const getResponceMessage = async (response: Response, title: string, login: stri
 
 
 export const fetchRegistration = async(user: IUserRegistration) => {
-  console.log(JSON.stringify(user))
   try {
     const response = await fetch(`${API_URL}/register`, {
       method: 'POST',
@@ -39,7 +38,6 @@ export const fetchRegistration = async(user: IUserRegistration) => {
 };
 
 export const fetchLogin = async(user: IUserLogin) => {
-  console.log(JSON.stringify(user))
   try {
     const response = await fetch(`${API_URL}/login`, {
       method: 'POST',
