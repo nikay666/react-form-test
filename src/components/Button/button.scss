@@ -12,4 +12,13 @@
   &:hover{
     background-color: var(--primary-light)
   }
+
+  &--small{
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+
+  &:disabled{
+    background-color: var(--primary-light)
+  }
 }

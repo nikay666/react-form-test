@@ -61,3 +61,8 @@ body {
   color: var(--dark-light);
   font-size: 0.8rem;
 }
+
+.container{
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}

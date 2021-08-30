@@ -6,20 +6,20 @@ type TextFieldProps = {
   type: 'text' | 'email' | 'password',
   placeholder: string | '',
   id: string,
-  name: string,
-  className: string,
+  className?: string,
   validation: Function,
-  validationCondition: string | number | RegExp
+  validationCondition: string | number | RegExp,
+  valueHandler: Function,
+  value: string,
 };
 
-const TextField = ({ label, type, id, placeholder, name, className, validation, validationCondition }: TextFieldProps) => {
-  const [value, setValue] = useState('');
+const TextField = ({ value, label, type, id, placeholder, className, validation, validationCondition, valueHandler }: TextFieldProps) => {
   const [error, setError] = useState<string | boolean>(false);
   const [pressed, setPresed] = useState(false);
 
   const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
-    setValue(e.target.value);
+    valueHandler(e.target.value);
     setError(validation(e.target.value, validationCondition));
   };
   
@@ -36,7 +36,6 @@ const TextField = ({ label, type, id, placeholder, name, className, validation, 
         value={value}
         className={`input ${pressed && error && 'input--error'}`}
         type={type}
-        name={name}
         id={id}
         placeholder={placeholder}
       />

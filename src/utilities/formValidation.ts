@@ -1,7 +1,7 @@
 export const getValidationErrorTypes = {
-  passwordLength: 'Слишком короткий пароль',
-  loginLength: 'Слишком короткий логин',
-  email: 'Некорректный email',
+  passwordLength: 'Too short password',
+  loginLength: 'Too short login',
+  email: 'Incorrect email',
 };
 
 export const checkValidLogin = (value: string, length: number) => {

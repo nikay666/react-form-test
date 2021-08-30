@@ -1,15 +1,14 @@
 .form{
-  width: 400px;
+  width: 320px;
   padding: 25px 40px 30px;
   display: flex;
   justify-content: baseline;
   align-items: baseline;
   flex-direction: column;
-  border-radius: var(--border-radius);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 
   &__button{
     margin-top: 10px;
+    width: 100%;
   }
 
   &__group{
@@ -17,7 +16,7 @@
  
   }
   
-  .input, .btn, .link{
+  .input, .link{
     width: 100%;
   }
 }

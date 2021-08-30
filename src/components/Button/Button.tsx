@@ -4,12 +4,14 @@ import './button.scss';
 type ButtonProps = {
   type: 'button' | 'submit' | 'reset' | undefined,
   className?: string | '',
-  children: React.ReactNode
+  children: React.ReactNode,
+  onClick: Function,
 };
 
-const Button: React.FC<ButtonProps> = ({ className, type, children }) => {
+const Button: React.FC<ButtonProps> = ({ className, type, children, onClick }) => {
   const clickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    onClick();
   };
 
   return (

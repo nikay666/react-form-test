@@ -1,0 +1,17 @@
+.message{
+  width: 320px;
+  padding: 4px 10px 10px;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgb(0 0 0 / 25%);
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  text-align: center;
+
+  &__button{
+    width: min-content;
+
+  }
+}
